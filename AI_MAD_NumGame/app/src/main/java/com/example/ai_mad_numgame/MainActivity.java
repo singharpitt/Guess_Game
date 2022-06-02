@@ -1,6 +1,6 @@
 package com.example.ai_mad_numgame;
 /*
-   App will show your last performance at the start of the activity. New Tournament will start from
+   App will show your last performance at the start of the activity. New Tournament will staret from
    all performance set to -1 again. And your new performance will be visible, when you return back to game
  */
 import androidx.appcompat.app.AlertDialog;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         int[][]dataFrame=dataPrep(); //dataPrep function returns a two-dimenssional array
         double slope=LR.getSlope(dataFrame); //LR class, which provides slope on invoking getSlope
         new AlertDialog.Builder(this)
-                // .setIcon() //your custom icon
+               // .setIcon() //your custom icon
                 .setTitle("Performance")
 
                 .setMessage(getInterpretation(dataFrame,slope))
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             button1.setText(rnd1*rnd2+" ");
         }
 
-        // Your code here, to diplay correct and incorrect options on the buttons
+      // Your code here, to diplay correct and incorrect options on the buttons
 
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
@@ -155,7 +155,10 @@ public class MainActivity extends AppCompatActivity {
     public int sumOfScore(){
         //Computing the sum of score array, which has the 1 or in each index,depending on correct or incorrect answers
         int sum=0;
-        // your code here
+       for(int i=0;i<3;i++)
+       {
+           sum+=score[i];
+       }
         return sum;
     }
 
@@ -173,8 +176,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String getInterpretation(int [][]dataFrame,double slope){
-        //provide interpretation based on your slope analysis
-        // Your code here
-        return "Your Interpretation";
+       if(slope >=0 && slope <=0.5)
+           return "Steady Can do Better !";
+       else if(slope>0.5)
+           return "Getting better !";
+       else
+           return "bad at it !";
     }
 }
