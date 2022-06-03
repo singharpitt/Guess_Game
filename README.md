@@ -33,5 +33,6 @@ be performance values. The getSlope method is a static method, so you won't need
 <li><b> In commit 2, we added interpretation.
 <li><b> We added the app logo. 
 <li><b> We used alert dialogue to show interpretation.
+<li><b> Version 1 completed.
 </ul>
 
