@@ -30,5 +30,6 @@ be performance values. The getSlope method is a static method, so you won't need
 <li><b>In commit 1 , we will add buttons .
 <li><b>We will add button options too using random function. 
 <li><b> Content code is taken from codeshala.
+<li><b> In commit 2, we added interpretation.
 </ul>
 
