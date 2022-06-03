@@ -29,5 +29,6 @@ be performance values. The getSlope method is a static method, so you won't need
 <li><b>getInterpretation</b> method returns a string based on the analysis of slope obtained from analysis of past six performances.</li>
 <li><b>In commit 1 , we will add buttons .
 <li><b>We will add button options too using random function. 
+<li><b> Content code is taken from codeshala.
 </ul>
 
